@@ -1,5 +1,6 @@
 ---
-
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -9,10 +10,12 @@
 		<link rel="stylesheet" href="../../src/styles/global.css"/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="The Developer portfolio and blog of Aaron Endsley" />
 
-		<title>Astro</title>
+		<title>Aaron Endsley: Web Developer</title>
 	</head>
 	<body>
+		<Header/>
 		<div class="index-hero">
 			<h2>
 				<span>Hello World!</span>
@@ -52,7 +55,7 @@
 				<p>Soli Deo Gloria <span> - Aaron Endsley</span></p>
 			</section>
 		</div>
-		
+		<Footer/>
 	</body>
 </html>
 
