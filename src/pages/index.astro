@@ -1,28 +1,17 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+const PageTitle = "Home";
+const Description = "Welcome to Aaron Endsley's Portfolio Site"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="../../src/styles/global.css"/>
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="The Developer portfolio and blog of Aaron Endsley" />
-
-		<title>Aaron Endsley: Web Developer</title>
-	</head>
-	<body>
-		<Header/>
+		<BaseLayout pageTitle={PageTitle} siteDescription={Description}>
 		<div class="index-hero">
 			<h2>
 				<span>Hello World!</span>
 				<span>I'm Aaron!</span>
 			</h2>
 			<div class="hero-image-container">
-				<img class="hero-image" src="../../src/images/Aaron.jpg" alt="A Photo of Aaron Endsley" />
+				<img class="hero-image" src="../../src/images/Aaron.jpg" alt="Aaron Endsley" />
 			</div>
 		</div>
 		<div class="index-content">
@@ -44,7 +33,7 @@ import Footer from '../components/Footer.astro';
 					<img
 						class="content-image"
 						src="../../src/images/Aaron_in_Space.jpg"
-						alt="A Photo of Aaron Endsley in a SpaceShip made for his children"
+						alt="Aaron Endsley in a SpaceShip made for his children"
 					/>
 				</div>
 				<p>
@@ -55,9 +44,7 @@ import Footer from '../components/Footer.astro';
 				<p>Soli Deo Gloria <span> - Aaron Endsley</span></p>
 			</section>
 		</div>
-		<Footer/>
-	</body>
-</html>
+	</BaseLayout>
 
 <style>
 	.index-hero {

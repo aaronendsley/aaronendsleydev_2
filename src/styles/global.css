@@ -26,6 +26,7 @@ main {
 .layout {
   position: relative;
   min-height: 100vh;
+  margin-top: 10rem;
 }
 
 .content-wrap {
