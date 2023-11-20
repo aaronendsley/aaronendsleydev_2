@@ -18,6 +18,15 @@ body {
   scrollbar-color: var(--green) var(--DarkBlue);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "open sans", sans-serif;
+}
+
 main {
   min-height: 100%;
   margin-top: 175px;

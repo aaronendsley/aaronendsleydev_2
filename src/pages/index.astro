@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 const PageTitle = "Home";
 const Description = "Welcome to Aaron Endsley's Portfolio Site"
+import '@fontsource/roboto';
+import '@fontsource/open-sans'
 ---
 
 		<BaseLayout pageTitle={PageTitle} siteDescription={Description}>
@@ -16,18 +18,13 @@ const Description = "Welcome to Aaron Endsley's Portfolio Site"
 		</div>
 		<div class="index-content">
 			<section class="post-decorator">
+				<h3>I like to solve problems that help others to make their work simpler!</h3>
+				<hr/>
 				<p>
-					&emsp; I am from Lawton, Oklahoma. I am a Christian, husband and a dad to four, I love playing
-					video games, reading, and watching Star Trek with my kids!
-				</p>
-				<p>
-					&emsp; I love to write code in HTML, CSS and JavaScript. I have been writing code for web
-					pages since I was twelve years old, when my Dad taught me how to write HTML. I went to college
-					and earned a bachelors degree in Multimedia Design, shortly after, I discovered CSS, and then
+					&emsp; I am from Lawton, Oklahoma. I am a Christian, husband and a dad to four, I love playing video games, reading, and watching Star Trek with my kids!I love to write code in HTML, CSS and JavaScript. I have been writing code for web pages since I was twelve years old, when my Dad taught me how to write HTML. I went to college and earned a bachelors degree in Multimedia Design, shortly after, I discovered CSS, and then
 					JavaScript shortly after that. I am self taught and have been a front end web developer
 					professionally for the last six years. I love to learn new web technologies and experiment
-					with them. I like to solve problems that help others or make their work simpler, I have done
-					this in my own professional work, and those opportunity's are a joy to me when they come.
+					with them. 
 				</p>
 				<div class="image-decorator">
 					<img
@@ -47,6 +44,16 @@ const Description = "Welcome to Aaron Endsley's Portfolio Site"
 	</BaseLayout>
 
 <style>
+	h3{
+		font-size: 1.5rem;
+		text-transform: capitalize;
+	}
+	hr{
+		display: block;
+		margin: 40px auto;
+		width:150px;
+		border: solid 2px var(--green);
+	}
 	.index-hero {
 		width: 80%;
 		margin: 35px auto;
