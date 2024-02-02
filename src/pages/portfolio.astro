@@ -5,6 +5,45 @@ const Description = "Welcome to my Portfolio";
 ---
 
 <BaseLayout pageTitle = {PageTitle} siteDescription={Description}>
-    <h1>Portfolio</h1>
-    <p>Welcome to my portfolio</p>
+    
+    <!--the wrapper needs to control the size-->
+    <div class="hero-projects-container">
+
+        <img class="hero-projects" src="../../src/images/code.png" alt="Code Editor Image" />
+        <h1>Projects</h1>
+    </div>
+    <p>Below you will find Projects that i have worked on that I think are some of my best work. In each Project you will find a link to the project or images of the Project If the application is no longer in opperation. I will include links to the code for each project if it is publicly available.</p>
+    <hr/>
 </BaseLayout>
+
+<style>
+    .hero-projects-container{
+        width: 100%;
+        position: relative;
+    }
+    .hero-projects{
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    h1{
+        background: #fff;
+        color:var(--DarkBlue);
+        width: 50%;
+        bottom: -20px;
+        right: 30%;
+        position: absolute;
+        font-size: 300%;
+        text-transform: uppercase;
+        text-align: right;
+
+    }
+
+    @media (min-width: 1000px){
+        .hero-projects{
+            width:700px;
+        }
+    }
+</style>
+
