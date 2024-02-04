@@ -8,7 +8,6 @@ const Description = "Welcome to my Portfolio";
     
     <!--the wrapper needs to control the size-->
     <div class="hero-projects-container">
-
         <img class="hero-projects" src="../../src/images/code.png" alt="Code Editor Image" />
         <h1>Projects</h1>
     </div>
@@ -18,31 +17,47 @@ const Description = "Welcome to my Portfolio";
 
 <style>
     .hero-projects-container{
-        width: 100%;
+        width: 80%;
         position: relative;
+        margin: 0 auto;
     }
     .hero-projects{
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
         display: block;
+        border:2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
     }
 
     h1{
         background: #fff;
         color:var(--DarkBlue);
-        width: 50%;
+        width: 80%;
         bottom: -20px;
-        right: 30%;
+        right: 0px;
         position: absolute;
-        font-size: 300%;
+        font-size: 150%;
         text-transform: uppercase;
         text-align: right;
+        padding-right: 10px;
+        letter-spacing: 2px;
+        text-align: center;
 
     }
 
+    @media (min-width:768px){
+        h1{
+            width: 50%;
+            font-size: 300%;
+        }
+    }
+
     @media (min-width: 1000px){
-        .hero-projects{
+        .hero-projects-container{
             width:700px;
+        }
+        h1{
+            width: 38%;
+            
         }
     }
 </style>
