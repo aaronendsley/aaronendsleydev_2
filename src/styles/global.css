@@ -27,6 +27,12 @@ h6 {
   font-family: "open sans", sans-serif;
 }
 
+hr {
+  display: block;
+  margin: 40px auto;
+  width: 150px;
+  border: solid 0.5px var(--green);
+}
 main {
   min-height: 100%;
   margin-top: 175px;
