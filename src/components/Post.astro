@@ -1,0 +1,64 @@
+---
+const {image, description, title} = Astro.props;
+---
+
+<div class="post">
+<div class="post-image">
+    <img src={image}/>
+</div>
+<div class="post-details">
+    <h3>{title}</h3>
+    <p>{description}</p>
+</div>
+</div>
+
+<style>
+    .post{
+        width:80%;
+        margin: 0 auto;
+        display: flex;
+        color: #fff;
+        border:2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        flex-direction: column;
+    }
+
+    .post-image {
+        flex:2;
+    }
+    .post-image img{
+        width: 100%;
+    }
+
+    .post-details{
+        flex:4;
+    }
+
+    .post-details h3{
+        color: var(--green);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        padding: 0 0 0 10px; 
+        margin: 0;
+    }
+
+    .post-details p{
+        padding: 10px;
+        margin: 2px;
+    }
+
+    @media (min-width: 1000px){
+        .post{
+            width: 700px;
+            flex-direction: row;
+        }
+
+        .post-image{
+            flex:1;
+        }
+
+        .post-details{
+            flex:3;
+        }
+    }
+</style>

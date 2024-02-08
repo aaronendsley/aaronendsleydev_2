@@ -18,6 +18,11 @@ body {
   scrollbar-color: var(--green) var(--DarkBlue);
 }
 
+p {
+  font-size: 1.2rem;
+  font-family: "open sans", sans-serif;
+}
+
 h1,
 h2,
 h3,

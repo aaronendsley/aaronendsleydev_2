@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Post from "../components/Post.astro";
 const PageTitle = 'Portfolio';
 const Description = "Welcome to my Portfolio"; 
+
 ---
 
 <BaseLayout pageTitle = {PageTitle} siteDescription={Description}>
@@ -12,6 +14,8 @@ const Description = "Welcome to my Portfolio";
         <h1>Projects</h1>
     </div>
     <p class="description">Below you will find Projects that i have worked on that I think are some of my best work. In each Project you will find a link to the project or images of the Project If the application is no longer in opperation. I will include links to the code for each project if it is publicly available.</p>
+    <hr/>
+    <Post image="../../src/images/code.png" description="This is a post" title="post 1"/>
     <hr/>
 </BaseLayout>
 
