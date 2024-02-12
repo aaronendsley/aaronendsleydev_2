@@ -76,7 +76,7 @@ main {
   content: "";
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -30px;
   height: 4px;
   width: 50%;
   border-bottom: 1px solid var(--green);
