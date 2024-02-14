@@ -1,7 +1,7 @@
 ---
-const {image, description, title} = Astro.props;
+const {image, description, title, postLink} = Astro.props;
 ---
-
+<a href={postLink}>
 <div class="post">
 <div class="post-image">
     <img src={image}/>
@@ -11,8 +11,12 @@ const {image, description, title} = Astro.props;
     <p>{description}</p>
 </div>
 </div>
+</a>
 
 <style>
+    a{
+        text-decoration: none;
+    }
     .post{
         width:80%;
         margin: 20px auto 40px auto;
@@ -23,11 +27,14 @@ const {image, description, title} = Astro.props;
         flex-direction: column;
     }
 
+    
+
     .post-image {
         flex:2;
     }
     .post-image img{
         width: 100%;
+        border-radius: 15px;
     }
 
     .post-details{
