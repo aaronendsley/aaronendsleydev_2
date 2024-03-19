@@ -22,7 +22,12 @@ p {
   font-size: 1.2rem;
   font-family: "open sans", sans-serif;
 }
-
+a {
+  color: var(--green);
+}
+a:visited {
+  color: var(--green);
+}
 h1,
 h2,
 h3,

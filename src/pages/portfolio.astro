@@ -11,7 +11,7 @@ const allPortfolio = await Astro.glob('../pages/portfolio/*.md');
     <!--the wrapper needs to control the size-->
     <div class="hero-projects-container">
         <img class="hero-projects" src="../../src/images/code.png" alt="Code Editor Image" />
-        <h1>Projects</h1>
+        <h1>Portfolio</h1>
     </div>
 <div id="portfolio-content">
     <section class="post-decorator">
@@ -19,12 +19,7 @@ const allPortfolio = await Astro.glob('../pages/portfolio/*.md');
     <p class="description"> Below you will find Projects that i have worked on that I think are some of my best work. In each Project you will find a link to the project or images of the Project If the application is no longer in opperation. I will include links to the code for each project if it is publicly available.</p>
 
     <hr/>
-    {allPortfolio.map(post => <Post image={post.frontmatter.image} description={post.frontmatter.description} title={post.frontmatter.title} postLink={post.url}/>)}
-    <!-- <Post image="../../src/images/code.png" description="This is a post" title="post 1" postLink="/"/>
-    <Post image="../../src/images/code.png" description="This is a post" title="post 1" postLink="/"/>
-    <Post image="../../src/images/code.png" description="This is a post" title="post 1" postLink="/"/>
-    <Post image="../../src/images/code.png" description="This is a post" title="post 1" postLink="/"/><Post image="../../src/images/code.png" description="This is a post" title="post 1" postLink="/"/> -->
-    
+    {allPortfolio.map(post => <Post image={post.frontmatter.image} description={post.frontmatter.description} title={post.frontmatter.title} postLink={post.url}/>)}    
     </section>
 </div>
 
@@ -91,7 +86,7 @@ const allPortfolio = await Astro.glob('../pages/portfolio/*.md');
             width: 750px;
         }
         h1{
-            width: 38%;
+            width: 50%;
             
         }
     }

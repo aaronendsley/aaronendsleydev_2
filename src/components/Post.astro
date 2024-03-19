@@ -56,16 +56,21 @@ const {image, description, title, postLink} = Astro.props;
 
     @media (min-width: 1000px){
         .post{
-            width: 700px;
+            width: 730px;
             flex-direction: row;
         }
 
         .post-image{
-            flex:1;
+            flex:2;
         }
-
+        
+        .post-image img{
+            margin-top: 10px;
+            margin-left:10px;
+        }
         .post-details{
-            flex:3;
+            flex:6;
+            margin-left: 10px;
         }
     }
 </style>

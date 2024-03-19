@@ -1,0 +1,39 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const {frontmatter} = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title} siteDescription={frontmatter.description}>
+    <img src={frontmatter.headerImage} alt={frontmatter.headerAlt}/>
+    <h1>{frontmatter.title}</h1>
+    <section class="container post-decorator">
+<slot/>
+
+</section>
+
+</BaseLayout>
+
+<style>
+ .container{
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+ }
+ h1{
+    color:var(--green);
+    text-align: center;
+ }
+ img{
+    width:80%;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+ }
+
+ @media(min-width: 1000px) {
+    .container{
+        width: 750px;
+    }
+ }
+</style>
+
