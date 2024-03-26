@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Post from "../components/Post.astro";
+const {PageTitle, Description, Posts, PageDescription} = Astro.props
+
+
+---
+
+<BaseLayout pageTitle = {PageTitle} siteDescription={Description}>
+    
+    <!--the wrapper needs to control the size-->
+    <div class="hero-posts-container">
+        <img class="hero-posts" src="../../src/images/code.png" alt="Code Editor Image" />
+        <h1>{PageTitle}</h1>
+    </div>
+<div id="posts-content">
+    <section class="post-decorator">
+    
+    <p class="description">{PageDescription}</p>
+
+    <hr/>
+    {Posts.map(post => <Post image={post.frontmatter.image} description={post.frontmatter.description} title={post.frontmatter.title} postLink={post.url}/>)}    
+    </section>
+</div>
+
+</BaseLayout>
+
+<style>
+    #posts-content{
+        width: 80%;
+        margin: 40px auto;
+        padding-bottom: 40px;
+    }
+    .hero-posts-container{
+        width: 80%;
+        position: relative;
+        margin: 0 auto;
+    }
+    .hero-posts{
+        width: 100%;
+        display: block;
+        border:2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+    }
+    .description{
+        width: 80%;
+        margin: 20px auto;
+        font-size: 1.2rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+        background: #fff;
+        color:var(--DarkBlue);
+        width: 80%;
+        bottom: -20px;
+        right: 0px;
+        position: absolute;
+        font-size: 150%;
+        text-transform: uppercase;
+        text-align: right;
+        padding-right: 10px;
+        letter-spacing: 2px;
+        text-align: center;
+
+    }
+    
+
+    @media (min-width:768px){
+        h1{
+            width: 50%;
+            font-size: 300%;
+        }
+        #posts-content{
+            width: 768px;
+        }
+
+
+    }
+
+    @media (min-width: 1000px){
+        .hero-posts-container{
+            width:700px;
+        }
+        .description{
+            width: 750px;
+        }
+        h1{
+            width: 50%;
+            
+        }
+    }
+</style>
+

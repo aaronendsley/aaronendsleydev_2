@@ -1,12 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-const PageTitle = "Blog";
-const Description = "Welcome to my Blog"
+import PostListLayout from "../layouts/PostListLayout.astro";
+const PageTitle = 'Blog';
+const Description = "Welcome to my Blog"; 
+const PageDescription= 'Below you will find Projects that i have worked on that I think are some of my best work. In each Project you will find a link to the project or images of the Project If the application is no longer in opperation. I will include links to the code for each project if it is publicly available.';
+const AllBlog = await Astro.glob('../pages/blog/*.md');
 ---
 
-<BaseLayout pageTitle={PageTitle} siteDescription={Description}>
-<div>
-    <h1>Blog Posts</h1>
-    <p>this is the blogpost page</p>
-</div>
-</BaseLayout>
+<PostListLayout PageTitle={PageTitle} Description={Description} PageDescription={PageDescription} Posts={AllBlog}/>
