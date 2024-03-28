@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+---
+<BaseLayout pageTitle='Page not found' Description="The page you were looking for does not exist">
+    <h2 id="FourOFourTitle"></h2>
+    <img src="../../src/images/insufficient.jpg"/>
+</BaseLayout>
+
+<script>
+    const BadPathName = window.location.pathname.split('/')[1];
+    const FourOFour = document.getElementById('FourOFourTitle');
+    FourOFour.innerText =`Your Query "${BadPathName}" does not exist`;
+</script>
+
+<style>
+    #FourOFourTitle{
+       text-align: center;
+       text-transform: uppercase;
+    }
+
+    img{
+        display: block;
+        margin: 0 auto;
+        width:80%;
+        border-radius: 20px;;
+    }
+
+    @media (min-width:600px){
+        img{
+            width: 60%;
+        }
+    }
+
+    @media (min-width: 1000px){
+        img{
+            width: 200px;
+            height:230px;
+        }
+    }
+</style>
