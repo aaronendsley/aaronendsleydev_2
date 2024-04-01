@@ -3,8 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 ---
 <BaseLayout pageTitle='Page not found' Description="The page you were looking for does not exist">
+    <h1>Page Not Found</h1>
+<section class="container post-decorator">
     <h2 id="FourOFourTitle"></h2>
     <img src="../../src/images/insufficient.jpg"/>
+</section>
 </BaseLayout>
 
 <script>
@@ -17,6 +20,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     #FourOFourTitle{
        text-align: center;
        text-transform: uppercase;
+    }
+
+    h1{
+        text-align: center;
     }
 
     img{

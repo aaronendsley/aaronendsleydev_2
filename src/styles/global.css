@@ -37,6 +37,11 @@ h6 {
   font-family: "open sans", sans-serif;
 }
 
+.container{
+  width: 80%;
+  margin: 10px auto;
+  padding: 20px;
+}
 hr {
   display: block;
   margin: 40px auto;
@@ -103,4 +108,10 @@ main {
 
 .image-decorator img {
   border-radius: 10px;
+}
+
+@media(min-width: 1000px) {
+  .container{
+      width: 750px;
+  }
 }
