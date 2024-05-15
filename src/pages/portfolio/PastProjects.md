@@ -1,8 +1,9 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "Projects I Have Done In the Past"
-image: "../../../src/images/portfolio/behanceLarger.jpg"
-headerImage: "../../../src/images/portfolio/behance.png"
+image: "../assets/behanceLarger.jpg"
+headerImage: "../assets/behance.png"
+headerAlt: "behance"
 description: "Through out the years i have done many different projects, some were development projects, while others were in pursuit of other interests i had at the time. Check out some of my oldest projects."
 ---
 

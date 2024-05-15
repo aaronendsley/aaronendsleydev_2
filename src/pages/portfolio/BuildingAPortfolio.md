@@ -1,8 +1,9 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "How I built this site"
-image: "../../../src/images/code.png"
-headerImage: "../../../src/images/portfolio/code2.png"
+image: "../assets/code2.png"
+headerImage: "../assets/code2.png"
+headerAlt: "Image of Code Editor"
 description: "How did I build this website, stay awhile and listen"
 ---
 

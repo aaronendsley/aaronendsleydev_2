@@ -1,8 +1,9 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "The TLDR of How I Got Started Programming"
-image: "../../../src/images/portfolio/behanceLarger.jpg"
-headerImage: "../../../src/images/portfolio/behance.png"
+image: "../assets/behanceLarger.jpg"
+headerImage: "../assets/behance.png"
+headerAlt: "behance"
 description: "How did I get into Web Development and Programming"
 ---
 

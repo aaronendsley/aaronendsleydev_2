@@ -1,10 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const {frontmatter} = Astro.props;
+import {Image} from 'astro:assets';
+const image = frontmatter.image;
+const images = import.meta.glob("../assets/*");
 ---
 
 <BaseLayout pageTitle={frontmatter.title} siteDescription={frontmatter.description}>
-    <img src={frontmatter.headerImage} alt={frontmatter.headerAlt}/>
+    <Image src={images[image]()} alt={frontmatter.headerAlt}/>
     <h2>{frontmatter.title}</h2>
     <section class="container post-decorator">
 <slot/>
@@ -30,7 +33,6 @@ const {frontmatter} = Astro.props;
     border: 2px solid var(--green);
     margin: 0 auto;
     display: block;
-    
  }
 
 

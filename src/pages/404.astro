@@ -1,12 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import {Image} from "astro:assets";
+import DataTheAndroid from '../images/insufficient.jpg'
 
 ---
 <BaseLayout pageTitle='Page not found' Description="The page you were looking for does not exist">
     <h1>Page Not Found</h1>
 <section class="container post-decorator">
     <h2 id="FourOFourTitle"></h2>
-    <img src="../../src/images/insufficient.jpg"/>
+    <Image src={DataTheAndroid} alt="Data the android, with a caption that says insufficient Data"/>
 </section>
 </BaseLayout>
 
