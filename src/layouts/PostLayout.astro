@@ -28,11 +28,18 @@ const images = import.meta.glob("../assets/*");
 
  
  img{
-    width:80%;
+    width:70%;
+    height: 100%;
     border-radius: 20px;
     border: 2px solid var(--green);
     margin: 0 auto;
     display: block;
+ }
+
+ @media (min-width:1000px){
+   img{
+      width: 50%;
+   }
  }
 
 
