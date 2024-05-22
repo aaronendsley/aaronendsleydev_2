@@ -2,8 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 const PageTitle = "Home";
 const Description = "Welcome to Aaron Endsley's Portfolio Site"
+import {Image} from 'astro:assets';
+import Hero from "../images/Aaron.jpg";
+import AaronSpaceShip from "../images/Aaron_in_Space.jpg"
 import '@fontsource/roboto';
 import '@fontsource/open-sans'
+
 ---
 
 		<BaseLayout pageTitle={PageTitle} siteDescription={Description}>
@@ -13,7 +17,7 @@ import '@fontsource/open-sans'
 				<span>I'm Aaron!</span>
 			</h2>
 			<div class="hero-image-container">
-				<img class="hero-image" src="../../src/images/Aaron.jpg" alt="Aaron Endsley" />
+				<Image class="hero-image" src={Hero} alt="Aaron Endsley" />
 			</div>
 		</div>
 		<div class="index-content">
@@ -26,9 +30,9 @@ import '@fontsource/open-sans'
 					professionally for the last eight years. I love to learn new web technologies and experiment with them. I am from Lawton, Oklahoma. I am a Christian, husband and a dad to four, I love playing video games, reading, and watching Star Trek with my kids!
 				</p>
 				<div class="image-decorator">
-					<img
+					<Image
 						class="content-image"
-						src="../../src/images/Aaron_in_Space.jpg"
+						src={AaronSpaceShip}
 						alt="Aaron Endsley in a SpaceShip made for his children"
 					/>
 				</div>

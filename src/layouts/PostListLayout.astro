@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Post from "../components/Post.astro";
-const {PageTitle, Description, Posts, PageDescription} = Astro.props
+import {Image} from 'astro:assets';
+const {PageTitle, Description, Posts, PageDescription} = Astro.props;
+import CodeImg from '../images/code.png';
 
 
 ---
@@ -12,7 +14,7 @@ const {PageTitle, Description, Posts, PageDescription} = Astro.props
 
     <!--add dynamic image -->
     <div class="hero-posts-container">
-        <img class="hero-posts" src="../../src/images/code.png" alt="Code Editor Image" />
+        <Image class="hero-posts" src={CodeImg} alt="Code Editor Image" />
         <h1>{PageTitle}</h1>
     </div>
 <div id="posts-content">
@@ -40,6 +42,7 @@ const {PageTitle, Description, Posts, PageDescription} = Astro.props
     }
     .hero-posts{
         width: 100%;
+        height: 100%;
         display: block;
         border:2px solid rgba(255, 255, 255, 0.2);
         border-radius: 15px;

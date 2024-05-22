@@ -3,7 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 const {frontmatter} = Astro.props;
 import {Image} from 'astro:assets';
 const image = frontmatter.image;
-const images = import.meta.glob("../assets/*");
+const images = import.meta.glob("../images/post-images/*");
 ---
 
 <BaseLayout pageTitle={frontmatter.title} siteDescription={frontmatter.description}>
