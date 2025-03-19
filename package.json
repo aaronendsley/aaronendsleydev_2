@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/open-sans": "^5.1.0",
-    "@fontsource/roboto": "^5.1.0",
-    "@fortawesome/fontawesome-free": "^6.6.0",
-    "astro": "^4.16.6"
+    "@fontsource/open-sans": "^5.2.5",
+    "@fontsource/roboto": "^5.2.5",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "astro": "^5.5.3"
   }
 }
